@@ -43,7 +43,6 @@ page = """
       crossorigin="anonymous"
     />
 <style>
-
 *{
     margin: 0;
     padding: 0;
@@ -54,11 +53,9 @@ page = """
     outline: none !important;
     color: white;
 }
-
 body{
     background-color: #0D1117;
 }
-
 header{
     margin: 3vh 1vw;
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -70,43 +67,35 @@ header{
     background-color: #161B22;
     border: 2px solid rgba(255, 255, 255, 0.11);
 }
-
 header:hover, section:hover{
     box-shadow: 0px 0px 15px black;
 }
-
 .brand{
     display: flex;
     align-items: center;
 }
-
 img{
     width: 2.5rem;
     height: 2.5rem;
     border: 2px solid black;
     border-radius: 50%;
 }
-
 .name{
     margin-left: 1vw;
     font-size: 1.5rem;
 }
-
 .intro{
     text-align: center;
     margin-bottom: 2vh;
     margin-top: 1vh;
 }
-
 .social a{
     font-size: 1.5rem;
     padding-left: 1vw;
 }
-
 .social a:hover, .brand:hover{
     filter: invert(0.3);
 }
-
 section{
     margin: 0vh 1vw;
     margin-bottom: 10vh;
@@ -117,37 +106,30 @@ section{
     border-radius: 20px;
     background-color: #161B22 ;
 }
-
 li:nth-child(1){
     padding: 1rem 1rem 0.5rem 1rem;
 }
-
 li:nth-child(n+1){
     padding-left: 1rem;
 }
-
 li label{
     padding-left: 0.5rem;
 }
-
 li{
     padding-bottom: 0.5rem;
 }
-
 span{
     margin-right: 0.5rem;
     cursor: pointer;
     user-select: none;
     transition: transform 200ms ease-out;
 }
-
 span.active{
     transform: rotate(90deg);
     -ms-transform: rotate(90deg);	 /* for IE  */
     -webkit-transform: rotate(90deg);/* for browsers supporting webkit (such as chrome, firefox, safari etc.). */
     display: inline-block;
 }
-
 ul{
     margin: 1vh 1vw 1vh 1vw;
     padding: 0 0 0.5rem 0;
@@ -156,12 +138,10 @@ ul{
     background-color: #1c2129;
     overflow: hidden;
 }
-
 input[type="checkbox"]{
     cursor: pointer;
     user-select: none;
 }
-
 input[type="submit"] {
     border-radius: 20px;
     margin: 2vh auto 1vh auto;
@@ -173,26 +153,21 @@ input[type="submit"] {
     font-size: 16px;
     font-weight: 500;
 }
-
 input[type="submit"]:hover, input[type="submit"]:focus{
     background-color: rgba(255, 255, 255, 0.068);
     cursor: pointer;
 }
-
 @media (max-width: 768px){
     input[type="submit"]{
         width: 100%;
     }
 }
-
 #treeview .parent {
     position: relative;
 }
-
 #treeview .parent > ul {
     display: none;
 }
-
 #sticks {
   margin: 0vh 1vw;
   margin-bottom: 1vh;
@@ -204,7 +179,6 @@ input[type="submit"]:hover, input[type="submit"]:focus{
   background-color: #161b22;
   align-items: center;
 }
-
 #sticks.stick {
   position: sticky;
   top: 0;
@@ -239,21 +213,17 @@ input[type="submit"]:hover, input[type="submit"]:focus{
        <input type="submit" name="Select these files ;)">
       </form>
     </section>
-
     <script>
       $(document).ready(function () {
         docready();
         var tags = $("li").filter(function () {
           return $(this).find("ul").length !== 0;
         });
-
         tags.each(function () {
           $(this).addClass("parent");
         });
-
         $("body").find("ul:first-child").attr("id", "treeview");
         $(".parent").prepend("<span>▶</span>");
-
         $("span").click(function (e) {
           e.stopPropagation();
           e.stopImmediatePropagation();
@@ -262,7 +232,6 @@ input[type="submit"]:hover, input[type="submit"]:focus{
           else $(this).addClass("active");
         });
       });
-
       if(document.getElementsByTagName("ul").length >= 10){
         var labels = document.querySelectorAll("label");
         //Shorting the file/folder names
@@ -296,7 +265,6 @@ input[type="submit"]:hover, input[type="submit"]:focus{
         });
     }
     </script>
-
 <script>
 $('input[type="checkbox"]').change(function(e) {
   var checked = $(this).prop("checked"),
@@ -318,7 +286,6 @@ $('input[type="checkbox"]').change(function(e) {
       let returnValue = all = ($(this).children('input[type="checkbox"]').prop("checked") === checked);
       return returnValue;
     });
-
     if (all && checked) {
       parent.children('input[type="checkbox"]').prop({
         indeterminate: false,
@@ -436,11 +403,9 @@ code_page = """
     text-decoration: none;
     color: white;
 }
-
 body{
     background-color: #0D1117;
 }
-
 header{
     margin: 3vh 1vw;
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -452,45 +417,37 @@ header{
     background-color: #161B22;
     border: 2px solid rgba(255, 255, 255, 0.11);
 }
-
 header:hover, section:hover{
     box-shadow: 0px 0px 15px black;
 }
-
 .brand{
     display: flex;
     align-items: center;
 }
-
 img{
     width: 2.5rem;
     height: 2.5rem;
     border: 2px solid black;
     border-radius: 50%;
 }
-
 .name{
     color: white;
     margin-left: 1vw;
     font-size: 1.5rem;
 }
-
 .intro{
     text-align: center;
     margin-bottom: 2vh;
     margin-top: 1vh;
 }
-
 .social a{
     font-size: 1.5rem;
     color: white;
     padding-left: 1vw;
 }
-
 .social a:hover, .brand:hover{
     filter: invert(0.3);
 }
-
 section{
     margin: 0vh 1vw;
     margin-bottom: 10vh;
@@ -502,14 +459,12 @@ section{
     background-color: #161B22 ;
     color: white;
 }
-
 section form{
     display: flex;
     margin-left: auto;
     margin-right: auto;
     flex-direction: column;
 }
-
 section div{
     background-color: #0D1117;
     border-radius: 20px;
@@ -517,14 +472,12 @@ section div{
     padding: 0.7rem;
     margin-top: 2vh;
 }
-
 section label{
     font-size: larger;
     font-weight: 500;
     margin: 0 0 0.5vh 1.5vw;
     display: block;
 }
-
 section input[type="text"]{
     border-radius: 20px;
     outline: none;
@@ -536,11 +489,9 @@ section input[type="text"]{
     background-color: #3e475531;
     box-shadow: inset 0px 0px 10px black;
 }
-
 section input[type="text"]:focus{
     border-color: rgba(255, 255, 255, 0.404);
 }
-
 section button{
     border-radius: 20px;
     margin-top: 1vh;
@@ -554,11 +505,9 @@ section button{
     cursor: pointer;
     transition: background-color 200ms ease;
 }
-
 section button:hover, section button:focus{
     background-color: rgba(255, 255, 255, 0.068);
 }
-
 section span{
     display: block;
     font-size: x-small;
@@ -569,27 +518,22 @@ section span{
     margin-right: auto;
     margin-bottom: 2vh;
 }
-
 @media (max-width: 768px) {
     section form{
         flex-direction: column;
         width: 90vw;
     }
-
     section div{
         max-width: 100%;
         margin-bottom: 1vh;
     }
-
     section label{
         margin-left: 3vw;
         margin-top: 1vh;
     }
-
     section input[type="text"]{
         width: calc(100% - 0.3rem);
     }
-
     section button{
         width: 100%;
         height: 5vh;
@@ -597,7 +541,6 @@ section span{
         margin-left: auto;
         margin-right: auto;
     }
-
     section span{
         margin-left: 5%;
     }
@@ -761,4 +704,3 @@ def page_not_found(e):
 
 if __name__ == "__main__":
     app.run()
-
